@@ -1,5 +1,5 @@
 <?php
-    require_once("../../config/Database.php");
+    require_once(__DIR__ . "/../config/Database.php");
 
     class torneosModel{
         public $PDO;
@@ -23,7 +23,7 @@
             // iniciamos declarando el statement y preparando la consulta.
             $statement = $this->PDO->prepare("INSERT INTO torneos VALUES(null, :nombreTorneo,
             :organizador, :patrocinadores, :sede, :categoria, :premio1, :premio2, :premio3,
-            :otroPremio, :usuario, :contrasena");
+            :otroPremio, :usuario, :contrasena)");
             //Asociamos los valores colocados como placeholder en el query mediante el 
             //binParam().
             $statement->bindParam(":nombreTorneo", $nombreTorneo);
@@ -56,7 +56,11 @@
                 return (password_verify($passwordCandidate, $passwordEncrypted)) ? true : false;
             }
             
-
+            //Crearemos el metodo para listar todos los torneos.
+            public function read(){
+                $statement = $this->PDO->prepare("SELECT * FROM torneos");
+                return ($statement->execute()) ? $statement->fetchAll() : false;
+            }
         }
     
 

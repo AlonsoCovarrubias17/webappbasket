@@ -9,4 +9,4 @@
   </head>
   <body>
     <h4>Aplicacion Web para Gestionar Torneos de Basket-Ball</h4>
-    <div. class ="container">
+    <div class ="container">

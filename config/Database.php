@@ -2,8 +2,8 @@
 class Database{
     private $host = "localhost";
     private $db = "proyecto";
-    private $user = "demo";
-    private $password = "123";
+    private $user = "root";
+    private $password = "";
 
     public function __construct()
     {
@@ -18,9 +18,10 @@ class Database{
                 $this->user,
                 $this->password
             );
+            $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $PDO;
         } catch (PDOException $e){
-            return $e->getMessage();
+            die("Error de conexión: " . $e->getMessage());
         }
     }
 }

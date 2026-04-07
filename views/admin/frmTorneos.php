@@ -7,10 +7,10 @@ require_once("template/header.php");
             CAPTURA LA INFORMACION DEL TORNEO.
         </div>
         <div class="card-body">
-            <form action="torneosInsert.php" method="post">
+            <form action="torneosinsert.php" method="post">
                 <div class="md-3">
                     <label for="nombreTorneo" class="form-label">NOMBRE DEL TORNEO</label>
-                    <input type="text" class ="form-control" name ="txtnombreTorneo"
+                    <input type="text" class ="form-control" name ="txtNombreTorneo"
                      id="nombreTorneo">
                 </div>
                 <div class="mb-3">

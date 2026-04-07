@@ -1,8 +1,8 @@
 <?php
-    require_once("../admin/template/header.php");
-    require_once("../../controllers/torneosController.php");
+    require_once(__DIR__ . "/template/header.php");
+    require_once(__DIR__ . "/../../controllers/torneosControllers.php"); 
     //Instanciamos controlador para ejecutar la consulta.
-    $objTorneosController= new torneosController();
+    $objTorneosController= new torneosControllers();
     //Capturamos los registros de la tabla en "filas".
     $rows = $objTorneosController->readTorneos();
 ?>
@@ -12,7 +12,7 @@
         </div>
         <div class="card-body">
             <table class="table table-hover table-bordered">
-                <thead class="table-ligth">
+                <thead class="table-light">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">TORNEO</th>
@@ -22,10 +22,10 @@
                 </thead>
                 <tbody>
                     <?php if($rows): ?>
-                        <?php foreach($row as $row): ?>
+                        <?php foreach($rows as $row): ?>
                             <tr>
                                 <th><?= $row["id"] ?></th>
-                                <th><?= $row["nombre>Torneo"] ?></th>
+                                <th><?= $row["nombreTorneo"] ?></th>
                                 <th><?= $row["organizador"] ?></th>
                                 <th>
                                      ACCIONES: LEER UNO, EDITAR, ELIMINAR.
@@ -44,5 +44,5 @@
          </div>
     </div>
 <?php
-    require_once("../admin/template/footer.php");
+    require_once(__DIR__ . "/template/footer.php");;
 ?>

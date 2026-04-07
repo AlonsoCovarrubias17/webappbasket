@@ -1,5 +1,5 @@
 <?php
-    require_once("../../controllers/torneosController.php");
+    require_once(__DIR__ . "/../../controllers/torneosControllers.php");
     //Atrapar los valores introducidos por el usuario en el formulario.
     $nombreTorneo = $_POST["txtNombreTorneo"];
     $organizador = $_POST["txtOrganizador"];
@@ -14,7 +14,7 @@
     $contrasena = $_POST["txtContrasena"];
 
     // Instanciamos nuestro Controlador.
-    $objController = new torneosController();
+    $objController = new torneosControllers();
     $objController->saveTorneo($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
     $premio1, $premio2, $premio3,$otroPremio, $usuario, $contrasena);
     

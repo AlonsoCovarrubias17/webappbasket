@@ -1,7 +1,7 @@
 <?php
-    require_once("../../models/torneosModel.php");
+    require_once(__DIR__ . "/../model/torneosmodels.php");
 
-    class torneosController{
+    class torneosControllers{
 
         private $model;
 
@@ -19,7 +19,7 @@
             //Recordemos que la funcion insert del modelo, regresa el ultimo id generado.
             $id= $this->model->insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
         $premio1, $premio2, $premio3, $otroPremio, $usuario, $contrasena);
-        return($id!=false) ? header("Location: mainTorneos.php") : header("Location: frmTorneos.php");
+        return($id!=false) ? header("Location: admin.php") : header("Location: frmTorneos.php");
 
         }
 
