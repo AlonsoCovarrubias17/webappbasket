@@ -30,8 +30,10 @@ require_once("template/header.php");
                LISTA DE TORNEOS
                </div>
                 <div class="card-body">
-
-                
+                  <a href="readAllTorneos.php" class="btn btn-primary">
+                    <img src="../img/listatorneo-admin.png" alt="Listar torneos." width="180"
+                    height="180">
+                </a>                
     
                 </div>
                 </div>

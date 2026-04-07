@@ -22,5 +22,10 @@
         return($id!=false) ? header("Location: mainTorneos.php") : header("Location: frmTorneos.php");
 
         }
+
+        //Metodo que manda ejecutar la funcion read del modelo del Torneo.
+        public function readTorneos(){
+            return ($this->model->read()) ? $this->model->read() : false;
+        }
     }
 ?>
