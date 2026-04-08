@@ -1,6 +1,11 @@
 <?php
     require_once(__DIR__ . "/../../controllers/torneosControllers.php");
-    //Atrapar los valores introducidos por el usuario en el formulario.
+
+    // Instanciamos nuestro Controlador.
+    $objController = new TorneosControllers();
+    //Obtener valores del formulario con POST !!! . Hay que traer el Id.
+
+    $id = $_POST["txtId"];
     $nombreTorneo = $_POST["txtNombreTorneo"];
     $organizador = $_POST["txtOrganizador"];
     $patrocinadores = $_POST["txtPatrocinador"];
@@ -10,12 +15,12 @@
     $premio2 = $_POST["txtPremio2"];
     $premio3 = $_POST["txtPremio3"];
     $otroPremio = $_POST["txtOtroPremio"];
-    $usuario = $_POST["txtUsuario"];
-    $contrasena = $_POST["txtContrasena"];
+   
 
-    // Instanciamos nuestro Controlador.
-    $objController = new TorneosControllers();
-    $objController->saveTorneo($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
-    $premio1, $premio2, $premio3,$otroPremio, $usuario, $contrasena);
+
+    $objController->updateTorneos($id, $nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
+    $premio1, $premio2, $premio3,$otroPremio);
+    
+    
     
 ?>
