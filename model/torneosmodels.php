@@ -68,6 +68,29 @@
                 $statement->execute([":id"=> $id]);
                 return $statement->fetch();
             }
+
+            //Metodo para actualizar los datos del Torneo.
+            public function update($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
+        $premio1, $premio2, $premio3,$otroPremio, $usuario, $contrasena){
+            $statement = $this->PDO->prepare("UPDATE torneos SET nombreTorneo = :nombreTorneo,
+            organizador = :organizador, patrocinador = :patrocinadores, sede =  :sede, categoria 
+            = :categoria, premio1 = :premio1, premio2 = :premio2, premio3 = :premio3, otroPremio
+            = :otroPremio, usuario = :usuario, contrasena = :contrasena WHERE id = :id");
+            //Asociamos los valores colocados como placeholder en el query mediante el 
+            //binParam().
+            $statement->bindParam(":nombreTorneo", $nombreTorneo);
+            $statement->bindParam(":organizador", $organizador);
+            $statement->bindParam(":patrocinadores", $patrocinadores);
+            $statement->bindParam(":sede", $sede);
+            $statement->bindParam(":categoria", $categoria);
+            $statement->bindParam(":premio1", $premio1);
+            $statement->bindParam(":premio2", $premio2);
+            $statement->bindParam(":premio3", $premio3);
+            $statement->bindParam(":otroPremio", $otroPremio);
+            $statement->bindParam(":usuario", $usuario);
+            $statement->bindParam(":contrasena", $contrasena);
+
+            }
         }
     
 
