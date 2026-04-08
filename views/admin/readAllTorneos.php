@@ -32,7 +32,7 @@
                                      <a href="readOneTorneos.php?id=<?= $row["id"] ?>" class="btn 
                                      btn-primary">Consultar</a>
                                      <a href="updateTorneos.php?id=<?= $row["id"] ?>" class="btn 
-                                     btn-primary">Editar</a>
+                                     btn-warning">Editar</a>
                                 </th>
                             </tr>
                         <?php endforeach; ?>

@@ -3,8 +3,18 @@
     require_once(__DIR__ . "/../../controllers/torneosControllers.php"); 
     //Instanciamos controlador para ejecutar la consulta.
     $objTorneosController= new TorneosControllers();
+    // Validar ID.
+    $id = $_GET["id"] ?? null;
+
+    if (!$id){
+        die("Error: No se recibio el ID");
+    }
     // Capturar el id y a su vez sacar la informacion del Torneo.
-    $lstTorneo=$objTorneosController->readOneTorneos($_GET["id"])
+    $lstTorneo=$objTorneosController->readOneTorneos($id);
+
+    if(!$lstTorneo){
+        die("Error: No se encontro el torneo");
+    }
     
 ?>
     <div class=" mx-auto p-5">
@@ -16,11 +26,11 @@
             <form action="torneoupdate.php" method="post">
                 <div class="md-3">
                     <label for="id" class="form-label">ID DEL TORNEO </label>
-                    <input type="text" class ="form-control" name ="txtId"
+                    <input type="hidden" class ="form-control" name ="txtId"
                      id="id" value="<?= $lstTorneo["id"]?>">
                 </div>
                 <div class="md-3">
-                    <label for="nombreTorneo" class="form-label">NOMBRE DEL TORNEO (ID: <?= $lstTorneo["id"] ?></label>
+                    <label for="nombreTorneo" class="form-label">NOMBRE DEL TORNEO (ID: <?= $lstTorneo["id"] ?>)</label>
                     <input type="text" class ="form-control" name ="txtNombreTorneo"
                      id="nombreTorneo" value="<?= $lstTorneo["nombreTorneo"]?>">
                 </div>
@@ -34,7 +44,7 @@
                     <label for="patrocinador" class="form-label">PATROCINADOR(ES)</label>
                     <textarea name="txtPatrocinador" id="patrocinador" cols="30" rows="2"
                     class="form-control"><?= $lstTorneo["patrocinadores"] ?></textarea>
-                    <span id="patrocinador" class="form-text">
+                    <span  class="form-text">
                         Atencion: se puede separar con "," si hay mas de un patrocinador.
                     </span>
                 </div>

@@ -32,5 +32,31 @@
         public function readOneTorneos($id){
             return ($this->model->readOne($id));
         }
+
+        //Metodo que manda llamar la funcion update del modelo.
+        public function updateTorneos($id, $nombreTorneo, $organizador, $patrocinadores, $sede, 
+    $categoria, $premio1, $premio2, $premio3, $otroPremio){
+
+    $resultado = $this->model->update(
+        $id, 
+        $nombreTorneo, 
+        $organizador, 
+        $patrocinadores, 
+        $sede, 
+        $categoria, 
+        $premio1, 
+        $premio2, 
+        $premio3, 
+        $otroPremio
+    );
+
+    if ($resultado != false) {
+        header("Location: /webappbasket/views/admin/readOneTorneos.php?id=" . $id);
+    } else {
+        header("Location: /webappbasket/views/admin/readAllTorneos.php");
+    }
+
+    exit;
+}
     }
 ?>
