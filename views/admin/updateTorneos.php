@@ -83,9 +83,10 @@
                          class="form-control" value="<?= $lstTorneo["contrasena"] ?>"readonly>
                     </div>
                 </div> 
-                <div class="col-12">
-                    <a href="readAllTorneos.php" class="btn btn-success">REGRESAR</a>
-                </div>              
+                <div class="col mb-3">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="readAllTorneos.php" class="btn btn-danger">Cancelar</a>
+                </div>            
             </form>
         </div>
         <div class="card-footer text-body-secondary">
