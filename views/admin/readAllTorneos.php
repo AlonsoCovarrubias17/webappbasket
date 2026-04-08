@@ -2,7 +2,7 @@
     require_once(__DIR__ . "/template/header.php");
     require_once(__DIR__ . "/../../controllers/torneosControllers.php"); 
     //Instanciamos controlador para ejecutar la consulta.
-    $objTorneosController= new torneosControllers();
+    $objTorneosController= new TorneosControllers();
     //Capturamos los registros de la tabla en "filas".
     $rows = $objTorneosController->readTorneos();
 ?>
@@ -29,6 +29,7 @@
                                 <th><?= $row["organizador"] ?></th>
                                 <th>
                                      ACCIONES: LEER UNO, EDITAR, ELIMINAR.
+                                     <a href="readOneTorneos.php?id=<?= $row["id"] ?>" class="btn btn-primary">CONSULTAR</a>
                                 </th>
                             </tr>
                         <?php endforeach; ?>

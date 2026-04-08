@@ -27,5 +27,10 @@
         public function readTorneos(){
             return ($this->model->read()) ? $this->model->read() : false;
         }
+
+        //Metodo para ejecutar la funcion readOne del modelo Torneo.
+        public function readOneTorneos($id){
+            return ($this->model->readOne($id));
+        }
     }
 ?>

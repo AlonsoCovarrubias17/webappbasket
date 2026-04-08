@@ -61,6 +61,13 @@
                 $statement = $this->PDO->prepare("SELECT * FROM torneos");
                 return ($statement->execute()) ? $statement->fetchAll() : false;
             }
+
+            //Metodo para devolver la informacion de un solo torneo.
+            public function readOne($id){
+                $statement = $this->PDO->prepare("SELECT * FROM torneos WHERE id= :id LIMIT 1");
+                $statement->execute([":id"=> $id]);
+                return $statement->fetch();
+            }
         }
     
 

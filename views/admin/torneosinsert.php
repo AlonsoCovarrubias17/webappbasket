@@ -14,7 +14,7 @@
     $contrasena = $_POST["txtContrasena"];
 
     // Instanciamos nuestro Controlador.
-    $objController = new torneosControllers();
+    $objController = new TorneosControllers();
     $objController->saveTorneo($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria,
     $premio1, $premio2, $premio3,$otroPremio, $usuario, $contrasena);
     
