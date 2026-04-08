@@ -17,7 +17,7 @@ require_once("template/header.php");
                 <div class="card-body">
 
                 <a href="frmtorneos.php" class="btn btn-primary">
-                    <img src="../img/torneo-admin.png" alt="Crear un torneo." width="180"
+                    <img src="../img/torneo-admin.png.jpg" alt="Crear un torneo." width="180"
                     height="180">
                 </a>
     
@@ -34,7 +34,6 @@ require_once("template/header.php");
                     <img src="../img/listatorneo-admin.png" alt="Listar torneos." width="180"
                     height="180">
                 </a>                
-    
                 </div>
                 </div>
           </div>
