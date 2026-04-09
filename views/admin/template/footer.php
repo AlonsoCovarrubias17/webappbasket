@@ -1,9 +1,9 @@
 </div> 
-  <footer class="text-center text-lg-star bg-white text-muted">
+  <footer class="text-center text-lg-start bg-white text-muted">
     <section>
-      <div class="container text-center text-md-star mr-5">
+      <div class="container text-center text-md-start mr-5">
         <div class="row mt-3">
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auo mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">LOGO AQUI</h6>
           </div>
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -12,13 +12,13 @@
                   Aplicacion Web con PHP, MySQL, PDO Y BootStrap.
               </p>
           </div>
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auo mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">ENLACES DE INTERES</h6>
               <p>
                   XXXXXXXX.
               </p>
           </div>
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auo mb-4">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">CONTACTO</h6>
               <p>
                   CORREO,  ETC.

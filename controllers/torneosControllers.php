@@ -58,5 +58,9 @@
 
     exit;
 }
+    //Metodo que manda llamar  a la funcion delete del modelo.
+    public function delete($id){
+        return ($this->model->delete($id)) ? header("Location: readAllTorneos.php"): header("Location: readOneTorneos.php?id=.$id");
+    }
     }
 ?>
