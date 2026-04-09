@@ -6,9 +6,11 @@
     //Capturamos los registros de la tabla en "filas".
     $rows = $objTorneosController->readTorneos();
 ?>
+    <div class="mx-auto p-5">
     <div class="card text-center">
         <div class="card-header">
-                LISTADO DE TORNEOS
+            <i class="fa-solid fa-trophy me-2" style="color: rgb(180, 148, 40);"></i>
+            LISTADO DE TORNEOS.
         </div>
         <div class="card-body">
             <table class="table table-hover table-bordered">
@@ -28,17 +30,19 @@
                                 <th><?= $row["nombreTorneo"] ?></th>
                                 <th><?= $row["organizador"] ?></th>
                                 <th>
-                                     ACCIONES:  EDITAR, ELIMINAR.
-                                     <a href="readOneTorneos.php?id=<?= $row["id"] ?>" class="btn 
-                                     btn-primary">Consultar</a>
-                                     <a href="updateTorneos.php?id=<?= $row["id"] ?>" class="btn 
-                                     btn-warning">Editar</a>
+                                     <a href="readOneTorneos.php?id=<?= $row["id"] ?>" class="btn btn-primary">
+                                        <i class="fa-solid fa-clipboard-list" style="color: rgb(255, 255, 255);"></i>
+                                    </a>
+
+                                    <a href="updateTorneos.php?id=<?= $row["id"] ?>" class="btn btn-warning">
+                                        <i class="fa-regular fa-pen-to-square" style="color: rgb(255, 255, 255);"></i>
+                                    </a>
                                      <!--Eliminar registro utilizando Ventana Modal.-->
                                      <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-success"
                                         data-bs-toggle="modal" 
                                         data-bs-target="#idModal<?= $row["id"] ?>">
-                                         Eliminar
+                                         <i class="fa-solid fa-trash-can" style="color: rgb(231, 234, 236);"></i>
                                     </button>
 
                                     <!-- Modal -->
@@ -80,6 +84,12 @@
                 </tbody>
             </table>             
          </div>
+    </div>
+    <div class="mx-auto p-2">
+    <div class="col-12">
+        <a href="admin.php" class="btn btn-success">REGRESAR</a>
+    </div> 
+    </div>
     </div>
 <?php
     require_once(__DIR__ . "/template/footer.php");;

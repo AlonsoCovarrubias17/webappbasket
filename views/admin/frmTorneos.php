@@ -1,9 +1,10 @@
 <?php
 require_once("template/header.php");
 ?>
-
+    <div class="mx-auto p-5">
     <div class="card">
         <div class="card-header">
+            <i class="fa-solid fa-trophy me-2" style="color: rgb(180, 148, 40);"></i>
             CAPTURA LA INFORMACION DEL TORNEO.
         </div>
         <div class="card-body">
@@ -91,6 +92,7 @@ require_once("template/header.php");
         <div class="card-footer text-body-secondary">
             FORMULARIO PARA REGISTRAR TORNEOS
         </div>
+    </div>
     </div>
 
 <?php

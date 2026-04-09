@@ -1,7 +1,7 @@
 <?php
 require_once("template/header.php");
 ?>
-
+<div class="mx-auto p-5">
 <div class="card text-center">
   <div class="card-header">
     MENU
@@ -69,6 +69,7 @@ require_once("template/header.php");
   <div class="card-footer text-body-secondary">
     Configuracion de torneos. Web App Basket-Ball.
   </div>
+</div>
 </div>
 
 <?php
