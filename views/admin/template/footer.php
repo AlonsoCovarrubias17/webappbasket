@@ -1,3 +1,7 @@
+// Alumno: Covarrubias Lopez Jesus Alonso
+// Grupo: LISIV-3
+// Materia: DESARROLLO WEB AVANZADO
+// Profesor: Dr. Aguilar Calderon Jose Alfonso
 </div> 
   <footer class="text-center text-lg-start bg-light text-muted">
     <section class="p-3">
@@ -39,7 +43,6 @@
                             <div>Universidad Autonoma de Sinaloa</div>
                           </div>
                         </li>
-                      
                   </ul>
               </p>
           </div>

@@ -1,3 +1,7 @@
+// Alumno: Covarrubias Lopez Jesus Alonso
+// Grupo: LISIV-3
+// Materia: DESARROLLO WEB AVANZADO
+// Profesor: Dr. Aguilar Calderon Jose Alfonso
 <!--Crearemos la cabecera de la plantilla para el admin. Utilizamos Boostrap 5.3-->
 <!doctype html>
 <html lang="en">
