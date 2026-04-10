@@ -1,7 +1,7 @@
-// Alumno: Covarrubias Lopez Jesus Alonso
-// Grupo: LISIV-3
-// Materia: DESARROLLO WEB AVANZADO
-// Profesor: Dr. Aguilar Calderon Jose Alfonso
+<!--Alumno: Covarrubias Lopez Jesus Alonso-->
+<!--Grupo: LISIV-3-->
+<!-- Materia: DESARROLLO WEB AVANZADO-->
+<!--Profesor: Dr. Aguilar Calderon Jose Alfonso-->
 <?php
     require_once ("../../controllers/torneosControllers.php");
     $objTorneosControllers = new torneosControllers();
