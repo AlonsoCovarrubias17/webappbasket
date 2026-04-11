@@ -8,7 +8,7 @@
     //Instanciamos controlador para ejecutar la consulta.
     $objTorneosController= new TorneosControllers();
     // Capturar el id y a su vez sacar la informacion del Torneo.
-    $lstTorneo=$objTorneosController->readOneTorneos($_GET["id"])
+    $lstTorneo=$objTorneosController->readOneTorneos($_GET["id"]);
     
 ?>
     <div class=" mx-auto p-5">
